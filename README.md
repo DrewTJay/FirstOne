@@ -18,6 +18,6 @@ my toolbox, and maybe the first step toward something big.
 I’m open to new ideas, honest feedback, and professional exchange. <br />
 If you’d like to contribute or get involved, create an Issue or send me a message.<br />
 All projects come with appropriate licenses (see project folders). <br />
-If you want to use something, get in touch.
+If you want to use something, get in touch.<br />
 
 Thanks for stopping by.
