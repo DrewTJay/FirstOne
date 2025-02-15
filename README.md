@@ -14,7 +14,7 @@ Unity – I develop Open-World Mobile Games that are not just visually impressiv
 
 Blender – I create detailed 3D models, realistic textures, and animations. The goal is to design high-quality, modern assets for games, virtual worlds, and beyond.
 
-Web & AI – I work with JavaScript, Python, and Machine Learning to develop interactive and dynamic applications.
+Web & AI – I work with JavaScript, Python, and Machine Learning to develop interactive and dynamic applications.<br />
 <br />
 I’m open to new ideas, honest feedback, and professional exchange. <br />
 If you’d like to contribute or get involved, create an Issue or send me a message.<br />
