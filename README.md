@@ -1,7 +1,7 @@
 # FirstOne – My Digital Playground
 Welcome to my world!☁️<br />
-This is a growing collection of my projects – from HTML, CSS & JavaScript web experiments<br />
-to Python scripts and most importantly, 3D models in Blender and Open-World Mobile Games in Unity.
+This is a growing collection of my projects – from HTML, CSS & JavaScript web experiments to<br />
+Python scripts and most importantly, 3D models in Blender and Open-World Mobile Games in Unity.
 
 What’s this about?
 I document everything that drives me and what I aim to build in the future. Large 3D worlds, polished characters, and high-end technical game design are the focus here. This is my creative lab, my toolbox, and maybe the first step toward something big.
