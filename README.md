@@ -13,7 +13,7 @@ my toolbox, and maybe the first step toward something big.
 **Unity** – I develop 3D Open-World Mobile Games for fun<br />
 **Blender** – Improving my skills in 2D to 3D texture mapping, UV shading and beyond<br />
 **WebGL & three.js** – Including JavaScript, and AI to boost results<br />
-...
+
 <br />
 I’m open to new ideas, honest feedback, and professional exchange. <br />
 If you’d like to contribute or get involved, create an Issue or send me a message.<br />
