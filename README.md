@@ -9,10 +9,10 @@ polished characters, and high-end technical game design are the focus here. In b
 and official AI/ML Engineer, based in Berlin Germany. While this right here is my creative lab, <br />
 my toolbox, and maybe the first step toward something big.
 
-**What’s Inside?**<br />
-*Unity* – I develop 3D Open-World Mobile Games for fun<br />
-*Blender* – Improving my skills in 2D to 3D texture mapping, UV shading and beyond<br />
-*WebGL & three.js* – Including JavaScript, and AI to boost results<br />
+***What’s Inside?***<br />
+**Unity** – I develop 3D Open-World Mobile Games for fun<br />
+**Blender** – Improving my skills in 2D to 3D texture mapping, UV shading and beyond<br />
+**WebGL & three.js** – Including JavaScript, and AI to boost results<br />
 ...
 <br />
 I’m open to new ideas, honest feedback, and professional exchange. <br />
