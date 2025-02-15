@@ -17,7 +17,6 @@ Want to collaborate or share feedback?<br />
 <br />
 I’m open to new ideas, honest feedback, and professional exchange. <br />
 If you’d like to contribute or get involved, create an Issue or send me a message.<br />
-<br />
 License & Usage
 All projects come with appropriate licenses (see project folders). <br />
 If you want to use something, get in touch.
