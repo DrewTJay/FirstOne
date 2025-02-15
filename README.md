@@ -20,4 +20,4 @@ If you’d like to contribute or get involved, create an Issue or send me a mess
 All projects come with appropriate licenses (see project folders). <br />
 If you want to use something, get in touch.<br />
 <br />
-*Thanks for stopping by.*
+Thanks for stopping by.
