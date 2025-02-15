@@ -10,9 +10,10 @@ and official AI/ML Engineer, based in Berlin Germany. While this right here is m
 my toolbox, and maybe the first step toward something big.
 
 **What’s Inside?**<br />
-Unity – I develop Open-World Mobile Games that are not just visually impressive but also technically optimized for smooth performance.<br />
-Blender – I create detailed 3D models, realistic textures, and animations. The goal is to design high-quality, modern assets for games, virtual worlds, and beyond.
-Web & AI – I work with JavaScript, Python, and Machine Learning to develop interactive and dynamic applications.<br />
+*Unity* – I develop Open-World Mobile Games that are not just visually impressive but also technically optimized for smooth performance.<br />
+*Blender* – I create detailed 3D models, realistic textures, and animations. The goal is to design high-quality, modern assets for games, virtual worlds, and beyond.
+*WebGL & three.js* – I work with JavaScript, 3d modeling, and Machine Learning to develop interactive and dynamic applications.<br />
+...
 <br />
 I’m open to new ideas, honest feedback, and professional exchange. <br />
 If you’d like to contribute or get involved, create an Issue or send me a message.<br />
