@@ -1,0 +1,1072 @@
+html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow-x: hidden;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #222;
+        color: #eee;
+      }
+
+/* Menü-Button knapp unter dem Label platzieren */
+.menu-button {
+  position: fixed; /* Fixiert den Button unabhängig vom Scrollen */
+  top: 50px; /* Abstand von oben - weiter unterhalb des Labels */
+  right: 25px; /* Abstand von rechts */
+  display: flex; /* Flexbox für Layout */
+  align-items: center; /* Zentriert Icon und Text vertikal */
+  gap: 0.5rem; /* Abstand zwischen Icon und Text */
+  color: white; /* Weiße Schrift */
+  font-family: Arial, sans-serif; /* Schriftart */
+  font-size: 1rem; /* Schriftgröße */
+  cursor: pointer; /* Klick-Indikator */
+  z-index: 1000; /* Sicherstellen, dass der Button sichtbar bleibt */
+  border: none; /* Keine Umrandung */
+  background: none; /* Kein Hintergrund */
+  padding: 0; /* Kein Innenabstand */
+  outline: none; /* Entfernt Fokusrahmen */
+}
+
+/* =============== Cookie Banner Styles =============== */
+.cookie-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparenter Hintergrund */
+  display: flex; /* Standardmäßig sichtbar */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+.cookie-content {
+  background: #fff;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  line-height: 1.5;
+}
+
+/* Titel */
+.cookie-headingz {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(90deg, #b5deecde, #2044d4c5, #072497a2);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: technoGradient 4s infinite linear;
+  text-shadow: 0px 0px 12px rgba(0, 170, 255, 0.404);
+}
+
+@keyframes technoGradient {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+
+.cookie-text p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.cookie-text a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Buttons */
+.cookie-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.btn-confirm, .btn-accept {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-confirm {
+  background-color: #333;
+  color: white;
+}
+
+.btn-accept {
+  background-color: #ff0000e1;
+  color: white;
+}
+
+.btn-accept:hover {
+  background-color: #cc0000;
+}
+
+/* Kippschalter */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #fff;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: #ff0000;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+
+.container {
+  margin-top: 100px; /* Abstand außerhalb des Containers */
+  padding-top: 20px; /* Abstand innerhalb des Containers */
+}
+
+
+.logo-container {
+  position: absolute;
+  top: 35px;      /* Abstand von oben */
+  left: 10px;     /* Abstand von links */
+  z-index: 9999;  /* Logo liegt über anderen Elementen */
+}
+
+.logo-container img {
+  width: 130px;   /* gewünschte Breite anpassen */
+  height: auto;   /* Proportionen erhalten */
+}
+
+
+/* Menü-Text */
+.menu-text {
+  font-weight: normal; /* Normale Schriftstärke */
+  font-size: 1rem; /* Schriftgröße */
+  font-family: Arial, sans-serif; /* Schriftart Arial */
+  color: rgba(241, 238, 238, 0.774); /* Weiße Farbe */
+  margin: 0; /* Kein zusätzlicher Rand */
+  transition: color 0.3s ease, transform 0.3s ease; /* Glatte Übergänge */
+}
+
+/* Menü-Icon mit drei Strichen */
+.menu-icon {
+  display: flex;
+  flex-direction: column; /* Striche untereinander */
+  justify-content: center; /* Zentriert die Striche */
+  gap: 3px; /* Abstand zwischen den Strichen */
+}
+
+.menu-icon .bar {
+  width: 18px; /* Breite der Striche */
+  height: 1.5px; /* Dünnere Striche */
+  background-color: rgba(250, 244, 244, 0.747); /* Weiße Strichfarbe */
+  border-radius: 1px; /* Abgerundete Kanten */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Glatte Übergänge */
+}
+
+/* Hover-Effekt für Button */
+.menu-button:hover .menu-text {
+  color: gold; /* Text wird goldgelb */
+  transform: scale(1.1); /* Text wird leicht vergrößert */
+}
+
+.menu-button:hover .bar {
+  background-color: gold; /* Striche werden goldgelb */
+  transform: scale(1.1); /* Striche werden leicht vergrößert */
+}
+
+
+      .section {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        box-sizing: border-box;
+        text-align: center;
+        position: relative;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s ease-in-out;
+      }
+      .section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ====================================
+         HINTERGRUNDFARBEN FÜR DIE SEITEN
+         ==================================== */
+         .bg1 {
+          background: linear-gradient(120deg, #255b72, #0d242c, #07181fda);
+        }
+        
+        .bg-last {
+          background: linear-gradient(120deg, #b43f22, #61260eec, #050507); /* Farbverlauf */
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          height: 100vh;
+          color: #fff;
+          position: relative;
+        }
+        
+
+        .bg1::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5); /* Halbtransparentes schwarzes Overlay */
+          z-index: 1;
+        }
+        
+        .bg1 > * {
+          position: relative;
+          z-index: 2; /* Inhalt bleibt über dem Overlay */
+        }
+        
+        
+       
+      .bg2 {
+        background-image: url('https://www.cloudcastlesolutions.com/images/IMG_20211010_183135_850.jpg'); /* Pfad zum Bild */
+          background-size: cover; /* Bedeckt den gesamten Bildschirm */
+          background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
+          background-position: center 58%; /* Zentriert das Bild horizontal und verschiebt es nach oben */
+          background-attachment: fixed; /* Optional: Bild bleibt fixiert beim Scrollen */
+          height: 100vh; /* Passt die Höhe an die Bildschirmhöhe an */
+        
+          /* Overlay und Farbe */
+          color: #fff; /* Weißer Text für besseren Kontrast */
+          position: relative;
+              }
+
+      .bg3 {
+        background: linear-gradient(120deg, #00416a, #e4e5e6);
+      }
+      .bg4 {
+        background: linear-gradient(120deg, #09203f, #537895);
+      }
+      .bg5 {
+        background: linear-gradient(120deg, #42275a, #734b6d);
+      }
+      .bg6 {
+        background: linear-gradient(120deg, #606c88, #3f4c6b);
+      }
+      .bg7 {
+        background: linear-gradient(120deg, #cc631d, #5a2818, #000000f6);
+      }
+
+      /* Angepasster Hintergrund für das "UNDER CONSTRUCTION"-Banner */
+      .construction-banner {
+        display: flex; /* Flexbox aktivieren */
+        justify-content: center; /* Zentriert den Text horizontal */
+        align-items: center; /* Zentriert den Text vertikal */
+        position: fixed; /* Fixiert das Banner oben */
+        top: 0;
+        left: 0;
+        width: 100%; /* Volle Breite */
+        height: 40px; /* Höhe des Banners */
+        background: linear-gradient(90deg, #c0c0c07a, #2d62c5, #c0c0c07a); /* Hintergrund-Verlauf */
+        color: white; /* Textfarbe */
+        font-family: "Orbitron", sans-serif; /* Schriftart */
+        font-size: 1.5rem; /* Schriftgröße */
+        z-index: 1000; /* Banner bleibt im Vordergrund */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Schatten für das Banner */
+      }
+      
+      /* Text in der Mitte */
+      .banner-text {
+        text-align: center; /* Text zentrieren (sicherheitshalber) */
+        width: 100%; /* Nimmt die gesamte Breite des Containers ein */
+      }
+      
+      
+      /* Menü‐Links rechts */
+      .menu-links {
+        flex: 1;                  /* nimmt den restlichen Platz rechts ein */
+        display: flex;
+        justify-content: flex-end;/* rechts ausrichten */
+        gap: 1rem;                /* Abstand zwischen Links */
+        white-space: nowrap;      /* Verhindert Zeilenumbruch */
+      }
+      
+      /* Links-Styling */
+      .about-link {
+        text-decoration: none;
+        color: #fff;
+        font-family: "Orbitron", sans-serif;
+        font-size: 1rem;
+        padding: 0.2rem 0.5rem;
+        /* WICHTIG, damit Größe glatt animiert wird: */
+        transition: all 0.3s ease;
+      }
+      
+      /* Button wird auf Hover größer */
+      .about-link:hover {
+        color: #ffcc00;
+        transform: scale(1.1); /* Statt 1.2 nur eine leichte Vergrößerung */
+      }
+      
+      
+      /* Für kleine Bildschirme (Responsive) */
+      @media (max-width: 768px) {
+        .construction-banner {
+          font-size: 1.1rem;
+          padding: 0.2rem;
+        }
+        .about-link {
+          display: block;
+          margin-top: 0.5rem;
+        }
+      }
+      
+
+      h1,
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        margin-top: 4rem;
+      }
+
+      /* ANGEPASSTER, NOCH DUNKLERER Effekt für "KI und Du" */
+      .silver-shine-text {
+        font-family: "Orbitron", sans-serif; /* Schriftart */
+        font-size: 2.5rem; /* Schriftgröße */
+        background: linear-gradient(
+          90deg, /* Horizontale Richtung des Verlaufs */
+          #e6e6e6 0%,   /* Sehr helles Silber */
+          #f2f2f2 25%, /* Fast Weiß */
+          #ffffff 50%, /* Reines Weiß für Glanz */
+          #cccccc 75%, /* Mittleres Silber */
+          #e6e6e6 100% /* Rückkehr zu hellem Silber */
+        );
+        -webkit-background-clip: text; /* Nur der Text zeigt den Verlauf */
+        -webkit-text-fill-color: transparent; /* Hintergrund sichtbar, Text bleibt durchsichtig */
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Schein um den Text */ 
+      }
+
+      
+      .silver-outline-text {
+        font-family: "Orbitron", sans-serif; /* Schriftart */
+        font-size: 2.5rem; /* Schriftgröße */
+        color: transparent; /* Text komplett durchsichtig */
+        -webkit-text-stroke: 1px #ffffff; /* Umrandung der Buchstaben in Weiß */
+        text-align: center; /* Zentrierung */
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.8); /* Leichter Leuchteffekt */
+      }
+
+
+      .cool-heading {
+        font-family: "Orbitron", sans-serif; /* Coole Schriftart */
+        font-size: 1.8rem; /* Kleinere Schriftgröße */
+        color: #ffffff; /* Weißer Text */
+        text-align: center; /* Zentriert den Text */
+        position: relative; /* Für den Schatten erforderlich */
+        animation: text-move 3s infinite ease-in-out; /* Sanfte Bewegung */
+      }
+      
+      .cool-heading::before {
+        content: "Deine entspannte Einführung in die Welt der KI"; /* Gleicher Text */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: rgba(255, 255, 255, 0.09); /* Sehr dezenter Schatten */
+        z-index: -1; /* Schatten hinter dem Originaltext */
+        transform: translate(2px, 2px); /* Anfangsversatz */
+        animation: shadow-move 3s infinite ease-in-out; /* Bewegung für Schatten */
+      }
+      
+      /* Animation für den Haupttext */
+      @keyframes text-move {
+        0%, 100% {
+          transform: translateY(0); /* Ausgangsposition */
+        }
+        50% {
+          transform: translateY(-2px); /* Leicht nach oben */
+        }
+      }
+      
+      /* Animation für den Schatten */
+      @keyframes shadow-move {
+        0%, 100% {
+          transform: translate(2px, 2px); /* Anfangsposition */
+        }
+        50% {
+          transform: translate(3px, 3px); /* Leichte Bewegung */
+        }
+      }
+      
+
+      
+
+
+      /* Blau-metallic (Wie "2. Wie funktioniert KI?") */
+      .blue-metallic-heading {
+        font-family: "Montserrat", sans-serif;
+        background: linear-gradient(
+          90deg,
+          #6fa7ff 0%,
+          #a0c8ff 50%,
+          #5f9eff 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 5px #ffffff;
+        font-size: 1.8rem;
+        margin-top: 4rem;
+      }
+
+      /* Audio-Element => Dezentes grau */
+      audio::-webkit-media-controls-panel,
+      audio::-webkit-media-controls-enclosure {
+        background-color: rgba(200, 200, 200, 0.2) !important;
+      }
+
+      .feedback-section {
+        margin-top: 3rem;
+        text-align: center;
+        padding: 2rem;
+        background: #e8f4ff;
+        color: #003366;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+      }
+
+      .feedback-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-family: "Orbitron", sans-serif;
+      }
+
+      .feedback-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-family: "Orbitron", sans-serif;
+      }
+      .feedback-section textarea {
+        width: 80%;
+        max-width: 500px;
+        height: 80px;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: none;
+        border-radius: 4px;
+        resize: none;
+        font-family: "Roboto", sans-serif;
+        font-size: 1rem;
+        background: #ffffff;
+        color: #003366;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      .feedback-section button {
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 4px;
+        background: #0066cc;
+        color: #fff;
+        font-family: "Orbitron", sans-serif;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      .feedback-section button:hover {
+        background: #0052a3;
+      }
+
+      /* Neuer "purple-metallic-subheading" für "5. Tipps im Umgang mit KI", etwas kleiner */
+      .purple-metallic-subheading {
+        font-family: "Montserrat", sans-serif;
+        background: linear-gradient(
+          90deg,
+          #b150ff 0%,
+          #dbaaff 50%,
+          #a064ff 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 5px #ffffff;
+        font-size: 1.6rem; /* kleiner als 2rem */
+        margin-top: 4rem;
+      }
+
+      /* Toller Effekt für "Fazit & Feedback" */
+      .fancy-effect-heading {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2rem;
+        margin-top: 4rem;
+        color: #fff;
+        text-shadow:
+          0 0 5px #51b4eee1,
+          0 0 10px #5147a8,
+          0 0 20px #c439e7;
+      }
+
+      /* Footer-Stil */
+      footer {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(to right, #ffffff, #d0eafc);
+        color: #222;
+        padding: 2rem 0 4rem 0;
+        text-align: center;
+      }
+      .particle-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+      }
+      .particle {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: #8ccaff;
+        border-radius: 50%;
+        opacity: 0.8;
+        animation: floatParticle 10s linear infinite;
+      }
+      @keyframes floatParticle {
+        0% {
+          transform: translateY(0) translateX(0);
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-150vh) translateX(40vw);
+          opacity: 0;
+        }
+      }
+      .footer-links {
+        position: relative;
+        z-index: 10;
+        margin-top: 2rem;
+        font-family: "Montserrat", sans-serif;
+      }
+      .footer-links a {
+        color: #333;
+        text-decoration: none;
+        margin: 0 8px;
+      }
+      .footer-links a:hover {
+        color: #000;
+        text-decoration: underline;
+      }
+
+      /* INFO-BLÖCKE */
+      .info-block {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 90%;
+        max-width: 1200px;
+        margin: 2rem auto;
+        gap: 4rem;
+      }
+      .info-image {
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .info-image img {
+        max-width: 150px;
+        height: auto;
+        border-radius: 8px;
+        display: block;
+        margin: 0 auto;
+      }
+      .info-text {
+        flex: 1 1 400px;
+        text-align: left;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1rem;
+        border-radius: 8px;
+      }
+      .info-text h3 {
+        margin-top: 0;
+        font-family: "Orbitron", sans-serif;
+      }
+      .info-text p {
+        line-height: 1.5;
+      }
+      .odd-layout .info-text {
+        order: 1;
+      }
+      .odd-layout .info-image {
+        order: 2;
+      }
+      .even-layout .info-image {
+        order: 1;
+      }
+      .even-layout .info-text {
+        order: 2;
+      }
+
+      .no-bg {
+        background: none !important;
+      }
+
+      /* FUTURISTISCHE KARTEN */
+      .futuristic-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+        width: 90%;
+        max-width: 1200px;
+        margin: 2rem auto;
+      }
+      .futuristic-card {
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 10px;
+        padding: 1.5rem;
+        text-align: left;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .futuristic-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      }
+      .futuristic-card h3 {
+        font-family: "Orbitron", sans-serif;
+        color: #fff;
+        margin-top: 0;
+        text-shadow: 0 0 5px #ff00ff;
+      }
+      .futuristic-card p {
+        margin-bottom: 0;
+        line-height: 1.5;
+        color: #ccc;
+      }
+
+      /* TIPPS-KARTEN => Gleicher Stil wie oben */
+      .tips-grid .tips-card {
+        background: rgba(255, 255, 255, 0.07) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      }
+      .tips-grid .tips-card h3 {
+        color: #fff !important;
+        text-shadow: 0 0 5px #ff00ff;
+      }
+      .tips-grid .tips-card p {
+        color: #ccc !important;
+      }
+
+      /* "4. KI im Alltag" => starker lila metallic Effekt + weißer Schatten */
+      .purple-metallic-heading {
+        font-family: "Montserrat", sans-serif;
+        background: linear-gradient(
+          90deg,
+          #b150ff 0%,
+          #dbaaff 50%,
+          #a064ff 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 5px #ffffff;
+        font-size: 2rem;
+        margin-top: 4rem;
+      }
+
+      /* "6. Fazit & Ausblick" => horizontale Farbverlauf-Animation */
+      @keyframes horizontalColorShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .animated-gradient-heading {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2rem;
+        margin-top: 4rem;
+        background: linear-gradient(
+          90deg,
+          #f0f0f0,
+          #cccccc,
+          #ffffff,
+          #dddddd
+        );
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: horizontalColorShift 3s ease-in-out infinite;
+      }
+
+      /* Sternen-Schweif-Effekt => dunkelgrau */
+      @keyframes starFade {
+        0% {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 1;
+          filter: brightness(1.5);
+        }
+        50% {
+          filter: brightness(3);
+          transform: translate(-50%, -50%) scale(1.2);
+        }
+        100% {
+          transform: translate(-50%, -50%) scale(1.5);
+          opacity: 0;
+          filter: brightness(0);
+        }
+      }
+      .star {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        pointer-events: none;
+        z-index: 9999;
+        background: radial-gradient(circle, #333 60%, rgba(51, 51, 51, 0) 80%);
+        clip-path: polygon(
+          0% 0%,
+          100% 0%,
+          80% 40%,
+          100% 100%,
+          0% 100%,
+          20% 40%
+        );
+        animation: starFade 0.3s forwards ease-out;
+      }
+
+      @media (max-width: 768px) {
+        .info-block {
+          flex-direction: column;
+          align-items: center;
+        }
+        .info-image,
+        .info-text {
+          width: 100%;
+        }
+      }
+  
+      /* Gemeinsames Styling für die Textfelder (Input und Textarea) */
+.input-style, .textarea-style {
+  width: 80%; /* Gleiche Breite wie dein blaues Textfeld */
+  max-width: 500px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 4px;
+  resize: none; /* Entfernt die Größenänderung für Textareas */
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  background: #ffffff; /* Heller Hintergrund */
+  color: #003366; /* Dunkle Textfarbe */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Schatteneffekt */
+  text-align: center; /* Horizontale Zentrierung des Textes */
+  line-height: 2.5rem; /* Vertikale Zentrierung des Textes durch die Höhe der Zeilen */
+ }
+
+ .textarea-style {
+  height: auto;
+  resize: none;
+  text-align: center; /* Horizontale Zentrierung */
+  line-height: 1.5rem; /* Vertikale Zentrierung in Textarea */
+}
+
+/* Fokus-Effekt für Textfelder */
+.input-style:focus, .textarea-style:focus {
+  outline: none;
+  border: 2px solid #0066cc; /* Blauer Rahmen beim Fokus */
+}
+
+/* Styling für den Button */
+.button-style {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #0066cc; /* Blau */
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button-style:hover {
+  background: #0052a3; /* Dunkleres Blau bei Hover */
+}
+
+/* Standard-Anzeige für größere Bildschirme */
+.door-gif {
+  display: block; /* Standardmäßig sichtbar */
+}
+
+/* Ausblenden für mobile Geräte */
+@media (max-width: 768px) {
+  .door-gif {
+    display: none; /* Komplett ausblenden */
+  }
+}
+
+/* Grundstil der Buchstaben */
+.letter { 
+  position: relative; /* Ermöglicht das Platzieren des ::after-Pseudo-Elements relativ zu jedem Buchstaben */
+  display: inline-block; /* Lässt jeden Buchstaben als eigenständigen Block erscheinen */
+  cursor: crosshair; /* Zeigt den Mauszeiger als "Pointer" (Handsymbol) bei Hover */
+  color: transparent; /* Entfernt die Füllfarbe der Buchstaben */
+  font-size: 9vw; /* Legt die Schriftgröße in Prozent der Viewport-Breite fest */
+  font-weight: bold; /* Macht die Buchstaben fett */
+  text-shadow: 0 0 10px #f6fafa63, 0 0 20px #9126f55d;
+  text-transform: uppercase; /* Wandelt die Buchstaben in Großbuchstaben um */
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3); /* Fügt eine weiße Umrandung mit geringer Transparenz hinzu */
+  transition: -webkit-text-stroke-color 0.3s ease, -webkit-text-stroke-width 0.3s ease; /* Animiert Umrandungsfarbe und -dicke beim Hover */
+}
+
+/* Mobile Ansicht anpassen */
+@media (max-width: 768px) {
+  .letter {
+    font-size: 3rem; /* Erhöhe die Schriftgröße für mobile Geräte */
+  }
+}
+
+/* Hover-Effekt für farbige Umrandung */
+.letter:hover {
+  color: #a5978f00; /* Textfarbe transparent */
+  text-shadow: 0 0 10px #ff4800ee, 0 0 20px #00ffea; /* Grundschatten in Orange und Cyan */
+  animation: electric-pulse 1.5s infinite; /* Animation dauert 3 Sekunden, läuft unendlich */
+}
+
+/* Keyframes für die elektrische Puls-Animation */
+@keyframes electric-pulse {
+  0%, 20% {
+    text-shadow: 0 0 10px #f6fafaa1, 0 0 20px #9126f5e3; /* Weiß-blauer und violetter Effekt */
+  }
+  25% {
+    text-shadow: 0 0 200px #ffffff, 0 0 200px #ffffff; /* Kurzes weißes Aufblitzen */
+  }
+  30%, 100% {
+    text-shadow: 0 0 10px #f6fafae0, 0 0 20px #9126f5e3; /* Roter und aquamarinfarbener Schein */
+  }
+}
+
+
+
+/* Effekt in der Nähe der Maus */
+.letter::after {
+  content: ''; /* Erstellt ein leeres Pseudo-Element */
+  position: absolute; /* Positioniert das Pseudo-Element relativ zum Buchstaben */
+  top: 50%; /* Zentriert es vertikal */
+  left: 50%; /* Zentriert es horizontal */
+  width: 0; /* Anfangsgröße: keine Breite */
+  height: 0; /* Anfangsgröße: keine Höhe */
+  border-radius: 50%; /* Macht den Effekt kreisförmig */
+  background: radial-gradient(circle, rgba(255, 165, 0, 0.6), rgba(0, 170, 255, 0.4), rgba(192, 192, 192, 0.1)); /* Erzeugt einen radialen Farbverlauf (Orange, Blau, Silber) */
+  transform: translate(-50%, -50%); /* Verschiebt das Zentrum des Effekts exakt zum Mauszeiger */
+  pointer-events: none; /* Verhindert, dass der Effekt Mausereignisse blockiert */
+  opacity: 0; /* Startzustand: unsichtbar */
+  transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease; /* Animiert Größe und Sichtbarkeit */
+}
+
+.letter:hover::after {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+  border: 2px dotted rgba(255, 255, 255, 0.5);
+  animation: orbit 1.5s linear infinite;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/* Grunddesign für die Toggle-Texte */
+.toggle-item span {
+  font-family: "Orbitron", sans-serif; /* Futuristische Schrift */
+  font-size: 0.9rem; /* Größere Schrift */
+  font-weight: bold;
+  letter-spacing: 1px; /* Mehr Abstand zwischen Buchstaben */
+  padding: 5px 10px; /* Innenabstand (oben/unten, links/rechts) */
+  margin-left: 10px; /* Mehr Abstand zum Schalter */
+  display: inline-block; /* Block-Layout für bessere Kontrolle */
+  transition: all 0.3s ease-in-out; /* Weiche Übergänge */
+}
+
+
+/* Styling für "ON Notwendig (immer aktiv)" */
+/* Basis-Style für den Neon-Glitch-Text */
+.toggle-item:first-child label {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #017580bb, #00aaffbb, #0044ffc0); /* Elektrische Farben */
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: electricGlitch 1.2s infinite alternate, lightningFlicker 3s infinite linear;
+}
+
+/* Blitz-Flacker-Effekt */
+@keyframes electricGlitch {
+  0% { text-shadow: 0px 0px 15px rgba(59, 115, 119, 0.8), 0px 0px 30px rgba(0, 153, 255, 0.6); }
+  30% { text-shadow: 0px 0px 20px rgba(3, 168, 180, 0.685), 0px 0px 35px rgba(0, 153, 255, 0.8); transform: translateX(-1px); }
+  60% { text-shadow: 0px 0px 30px rgba(3, 137, 170, 0.808), 0px 0px 40px rgba(0, 102, 255, 0.8); transform: translateX(1px); }
+  100% { text-shadow: 0px 0px 10px rgba(13, 199, 199, 0.8), 0px 0px 25px rgba(0, 153, 255, 0.6); transform: translateX(0px); }
+}
+
+/* Plötzlicher Blitz-Flacker-Effekt */
+@keyframes lightningFlicker {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.5); }
+}
+
+/* ⚡ Hover Effekt - Verstärktes Blitzen & Verzerrung */
+.toggle-item:first-child label:hover {
+  animation: intenseElectricGlitch 0.5s infinite alternate, lightningFlicker 1.5s infinite linear;
+  transform: scale(1.1) skewX(5deg);
+}
+
+/* Intensivere elektrische Störung bei Hover */
+@keyframes intenseElectricGlitch {
+  0% { text-shadow: 0px 0px 25px rgba(19, 37, 37, 0.76), 0px 0px 50px rgba(0, 153, 255, 0.801); transform: translateX(-2px); }
+  50% { text-shadow: 0px 0px 30px rgba(19, 37, 37, 0.76), 0px 0px 60px rgba(0, 102, 255, 0.795); transform: translateX(2px); }
+  100% { text-shadow: 0px 0px 35px rgba(19, 37, 37, 0.76), 0px 0px 70px rgba(0, 51, 255, 0.829); transform: translateX(0px); }
+}
+
+
+
+/* Gleiche Animation für den Effekt */
+@keyframes technoGradient {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+/* ✨ FARBE für "OFF OFF OFF"-Texte */
+.toggle-off {
+  color: #a0a0a0; /* Helles Grau */
+  font-style: italic; /* Kursiv für dezenteren Look */
+  opacity: 0.8; /* Leicht transparent */
+}
+
+/* 🌟 Farb- und Größenanpassung für "Marketing" */
+.toggle-item:nth-child(2) span:first-of-type {
+  color: #0000007c; /* Kräftiges Orange */
+  font-size: 0.6rem; /* Spezielle Größe für Marketing */
+  text-transform: uppercase; /* GROSSBUCHSTABEN */
+}
+
+/* 🌟 Farb- und Größenanpassung für "Funktionen" */
+.toggle-item:nth-child(3) span:first-of-type {
+  color: #0000007b; /* Neon-Türkis */
+  font-size: 0.6rem; /* Etwas kleiner */
+  font-style: italic; /* Kursiv für edleren Look */
+}
+
+/* 🌟 Farb- und Größenanpassung für "Analyse" */
+.toggle-item:nth-child(4) span:first-of-type {
+  color: #0000007a; /* Lila Metallic */
+  font-size: 0.6rem;
+  text-decoration: underline; /* Unterstrichen für Hervorhebung */
+}
+
+/* ✨ HOVER-EFFEKT: Text bekommt Neon-Schatten */
+.toggle-item span:hover {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.9); /* Leuchtend bei Hover */
+  transform: scale(1.1); /* Beim Hover leicht vergrößern */
+}
+
+/* ✨ Falls "ON" aktiv ist, wird die Farbe angepasst */
+.switch input:checked + .slider + span {
+  color: #00ff00 !important; /* Neon-Grün für aktivierten Zustand */
+  font-weight: bold;
+}
+
+
+#weatherContainer {
+  position: fixed;
+  bottom: 20px;  /* Abstand vom unteren Bildschirmrand */
+  right: 20px;   /* Abstand vom rechten Bildschirmrand */
+  background: rgba(0, 0, 0, 0.7); /* Dunkler transparenter Hintergrund */
+  color: white;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  z-index: 9999; /* Stelle sicher, dass es über anderen Elementen liegt */
+}
+
+#weatherInfo {
+  margin: 0;
+  text-align: center;
+}
+
+.background-iframe {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: -1; /* Setzt das iFrame in den Hintergrund */
+}
