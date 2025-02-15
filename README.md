@@ -11,7 +11,7 @@ my toolbox, and maybe the first step toward something big.
 
 **What’s Inside?**<br />
 *Unity* – I develop Open-World Mobile Games that are not just visually impressive but also technically optimized for smooth performance.<br />
-*Blender* – I create detailed 3D models, realistic textures, and animations. The goal is to design high-quality, modern assets for games, virtual worlds, and beyond.
+*Blender* – I create detailed 3D models, realistic textures, and animations. The goal is to design high-quality, modern assets for games, virtual worlds, and beyond.<br />
 *WebGL & three.js* – I work with JavaScript, 3d modeling, and Machine Learning to develop interactive and dynamic applications.<br />
 ...
 <br />
