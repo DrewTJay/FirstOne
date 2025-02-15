@@ -1,6 +1,7 @@
 # FirstOne
 Willkommen in meiner Welt :)<br />
-Hier findest du eine wachsende Sammlung meiner Arbeiten aus den Bereichen HTML, CSS, JavaScript, Python, Blender, Unity und künstliche Intelligenz. Ich nutze dieses Repository, um meine Fortschritte festzuhalten, Neues dazuzulernen und meine Ergebnisse mit Freunden, Kolleg:innen und potenziellen Geschäftspartnern zu teilen.
+Hier findest du eine wachsende Sammlung meiner Arbeiten aus den Bereichen HTML, CSS, JavaScript, Python, Blender, Unity und künstliche Intelligenz. Ich nutze dieses Repository, 
+um meine Fortschritte festzuhalten, Neues dazuzulernen und meine Ergebnisse mit Freunden, Kolleg:innen und potenziellen Geschäftspartnern zu teilen.
 
 Über dieses Repository
 Vielseitige Projekte: Von einfachen Web-Demos über KI-Experimente bis hin zu kreativen 3D-Szenen – ich möchte alles, was mir Spaß macht oder mir beruflich weiterhilft, hier dokumentieren.
