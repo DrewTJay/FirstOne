@@ -4,9 +4,10 @@ This is a growing collection of my projects – from HTML, CSS & JavaScript web 
 Python scripts and most importantly, 3D models in Blender and Open-World Mobile Games in Unity.
 
 What’s this about?
-I document everything that drives me and what I aim to build in the future. Large 3D worlds, polished characters, <br />
-and high-end technical game design are the focus here. In business life I am an IT-Admin and official AI/ML Engineer.<br />
-While this right here is my creative lab, my toolbox, and maybe the first step toward something big.
+I document everything that drives me and what I aim to build in the future. Large 3D worlds, <br />
+polished characters, and high-end technical game design are the focus here. In business life I am an IT-Admin <br />
+and official AI/ML Engineer, based in Berlin Germany. While this right here is my creative lab, <br />
+my toolbox, and maybe the first step toward something big.
 
 What’s inside?
 Unity – I develop Open-World Mobile Games that are not just visually impressive but also technically optimized for smooth performance.
